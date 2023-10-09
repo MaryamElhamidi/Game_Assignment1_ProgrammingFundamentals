@@ -222,7 +222,7 @@ def week_of():
         Self_discipline = +10
         Stress_Level = +35
         Goal_Planning = +10
-        print("Congratulations, you've gained 10 points across all three attributes, and a special 35 points for stress levels!")
+        print("Congratulations, you've gained 10 points across all three attributes, and a special 35 points for stress levels! (yes/no): ").lower()
     else:
         Engagement = -5
         Self_discipline = -5
@@ -232,4 +232,17 @@ def week_of():
 
 # week_of()
 
-'''
+def intro():
+    welcome = 
+
+    
+    role = input("It’s time to choose which character you would like to play! It's important to take into account their unique characteristics and potential contributions. There are two students in which you may choose from. Would you like more information? (yes/no): ").lower()
+    if role == "yes":
+        print ("The choices are:")
+        print ("Student 1, Heba Ali, at 19 years old, is a domestic student residing close to the institution and has actively sought out Accessible Learning services, reflecting her determination and commitment to academic success. However, her preparedness in the critical two weeks before classes commence may play a pivotal role in her achievements.")
+        print("Student 2, Joseph Bane, aged 20, is an international student from Brampton, demonstrating strong academic focus and resourcefulness despite the challenges of distance. Similarly, his actions in the two weeks leading up to classes could significantly impact his success. The question then arises: which student's journey and preparation align better with the themes and objectives of your game?")
+        role_choice = input("Enter yes to play the game as Heba, or enter no to play as Joesph' (yes/no): ").lower()
+        if role_choice == "yes":
+            print("Congrautulations, you are now play as Heba Ali.")
+        else:
+            print("Congrautulations, you are now play as Joesph Ali.")
