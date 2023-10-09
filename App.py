@@ -213,6 +213,7 @@ def one_week_pr():
         Stress_Level = -35
         Goal_Planning = -5
         print("Oh no! You've lost 5 points across the board but lost 35 for stress levels")
+# one_week_pr()
 
 def week_of():
     one_card_pickup = int("Week of: Would you like to pick up your card (yes/no): ").lower()
@@ -229,5 +230,6 @@ def week_of():
         Goal_Planning = -5
         print("Oh no! You've lost 5 points across the board but lost 35 for stress levels")
 
+# week_of()
 
 '''
