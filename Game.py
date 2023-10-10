@@ -35,7 +35,9 @@ def intro():
             print("Congrautulations, you are now play as Joesph Ali.")
             return
     else:
-        print("That's okay! Hope to see you soon!")    
+        print("That's okay! Hope to see you soon!")
+
+
 '''
 This module enters the welcome message and gives the user information about the respected characters given. They get to choose which character they would like to play as as well.
 '''
