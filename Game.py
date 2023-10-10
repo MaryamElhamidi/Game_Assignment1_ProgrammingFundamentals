@@ -39,19 +39,6 @@ def intro():
 '''
 This module enters the welcome message and gives the user information about the respected characters given. They get to choose which character they would like to play as as well.
 '''
-
-print(intro())
-#printing the welcome message and letting users choose weather to begin or not, as well as giving them insight on the characters and who they want to play as.
-
-print(two_week_pr())
-#printing module 1
-print(one_week_pr())
-#printing module 2
-
-print(week_of())
-#printing module 3
-
-
 def game_rules():
     total_points = Engagement + Self_discipline + Stress_Level + Goal_Planning  
     if total_points <= -480:
@@ -69,5 +56,15 @@ def game_rules():
 This module discusses the win or loss criteria for the game Academic Weapon.
 '''
 
+print(intro())
+#printing the welcome message and letting users choose weather to begin or not, as well as giving them insight on the characters and who they want to play as.
 
-print (game_rules())
+print(two_week_pr())
+#printing module 1
+print(one_week_pr())
+#printing module 2
+
+print(week_of())
+#printing module 3
+
+print(game_rules())
