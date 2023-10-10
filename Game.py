@@ -37,22 +37,22 @@ def intro():
     else:
         print("That's okay! Hope to see you soon!")
 
-
 '''
 This module enters the welcome message and gives the user information about the respected characters given. They get to choose which character they would like to play as as well.
 '''
 def game_rules():
     total_points = Engagement + Self_discipline + Stress_Level + Goal_Planning  
-    if total_points <= -480:
+    if total_points <= -100:
         print(f"Total Points: {total_points}. Critical Loss.Every decision you made greatly impacted all four attributes.")
         print("You need to review the decisions in which you have made during the game, review where you lost cirtical attribute points (10-35). Better luck next time!")
-    elif -480 < total_points < 650:
+    elif -100 <= total_points <= -50:
         print(f"Total Points: {total_points}. Loss. You made bad decisions and good decisions, and it has impacted your attributes. The majority of your decisions were bad.")
         print("You need to review the decisions in which you have made during the game, review where you lost cirtical attribute points (10-35). Better luck next time!")
-    elif 650 <= total_points < 950:
+    elif -50 <= total_points <= 0:
         print(f"Total Points: {total_points}. Win. You made good  decisions and bad decisions, but overall your attributes are not negatively affected.")
         print("You need to review the decisions in which you have made during the game, review where you lost cirtical attribute points (10-35). Better luck next time!")
     else:
+        total_points <= 100
         print(f"Total Points: {total_points}. Critical Win! You made every possible right decision! Congrautlations!")
 '''
 This module discusses the win or loss criteria for the game Academic Weapon.
@@ -68,5 +68,4 @@ print(one_week_pr())
 
 print(week_of())
 #printing module 3
-
 print(game_rules())
