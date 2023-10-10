@@ -1,5 +1,5 @@
-""" implements the interactivity with the user.
-"""
+#Implementation:
+
 
 # Three Attrivutes
 Engagement = 0
@@ -172,9 +172,9 @@ who can potentially opt out of certain fees like dental plans and apply for OSAP
 importance of these decisions, with 35 points representing high significance. These choices significantly impact the
 attributes, emphasizing their role in shaping the students' academic path.
 '''
-# two_week_pr() 
 
 def one_week_pr():
+    print("Welcome to one week prior to commencement of classes!")
     laptop_reqs = input("1 week prior: Would you like to check your program laptop requirements' (yes/no): ").lower()
     if laptop_reqs == "yes":
          Engagement = +35
@@ -189,19 +189,30 @@ def one_week_pr():
         Stress_Level = -35
         Goal_Planning = -35
         print("You have lost 35 points across the board...Better luck next time!")
-
+    '''
+    Within the one_week_pr module, a critical parameter prompts users to decide whether they wish to access information 
+    about their laptop requirements for their academic program. This seemingly simple choice bears significant consequences
+    for their academic journey. When students proactively seek information about their laptop requirements before the start
+    of classes, they ensure they have the right tools for their coursework. This awareness allows them to make informed decisions,
+    such as purchasing a new laptop or making necessary upgrades, well in advance. However, neglecting to address this vital aspect
+    can lead to dire situations, where students may find themselves unable to meet program-specific laptop requirements, 
+    hampering their ability to participate effectively. In the game, agreeing to access laptop requirements yields a substantial 
+    reward of 35 points across all attributes, reflecting the importance of preparedness. Conversely, those who disagree face a 
+    substantial loss of 35 points across all attributes, emphasizing the significance of this decision in shaping their academic 
+    journey.
+    '''
     oritentation_choice = input("1 week prior: Do you want to attend orientation? (yes/no): ").lower()
     if oritentation_choice == "yes":
         Engagement = +10
         Self_discipline = +10
         Goal_Planning = +35
         print("Congratulations, you've gained 10 points across all three attributes!")
-        event_type = int("Would you like to learn about the three events hosted at orientation (yes/no): ").lower()
+        event_type = input("Would you like to learn about the three events hosted at orientation (yes/no): ").lower()
         if event_type == "yes":
              print("Program sessions. Meet your professors and classmates. Learn about how to succeed in your program.")
              print("Services. Check out the Marketplace to meet our services, student organizations, and supports. They'll be happy to answer any of your questions and let you know of any other events going on! (You might even get some Sheridan swag!)")
              print("Social activities. There are two events, Art Hive, and Light Lunch. In Art Hive, you unleash your creativity, relax, and connect with other students. During Light lunch, you get a chance to enjoy a light complimentary lunch. It's the perfect opportunity to hang out with other new students.")
-             event_choice1 = int("Would you like to go to all three events (yes/no): ").lower()
+             event_choice1 = input("Would you like to go to all three events (yes/no): ").lower()
              if event_choice1 == "no":
                 Engagement = +35
                 Self_discipline = +35
@@ -235,6 +246,7 @@ def one_week_pr():
     Conversely, failing to attend any event constitutes a significant error, leading to a 
     substantial loss of 35 points across all attributes.
    ''' 
+    
     one_card = input("1 week prior: Do you want submit your Sheridan One Card Photo? (yes/no): ").lower()
     if one_card == "yes":
         Engagement = +10
@@ -248,25 +260,63 @@ def one_week_pr():
         Stress_Level = -35
         Goal_Planning = -5
         print("Oh no! You've lost 5 points across the board, except for stress levels. You have lost 35 in that category. You can not recover these points.")
-
-    find_classes = int("1 week prior: Would you like to walk around campus and find your classes (yes/no): ").lower()
+    '''
+    This parameter falls under the one_week_pr module, where students receive an email during the week preceding their first day of classes,
+    requesting them to submit a photo for their one card. Users are given the choice to comply with this request. Failing to submit their 
+    one card photo before classes commence can have significant consequences, particularly in terms of increased stress levels. 
+    This is because, once classes begin, students are inundated with coursework, potentially causing them to overlook the importance of the one card. 
+    However, neglecting this action is ill-advised, as the one card is indispensable for hassle-free access around the campus. 
+    If the user chooses to submit their photo, they receive a 10-point boost across all three attributes. 
+    Conversely, if they opt not to submit it, their stress levels are significantly impacted, resulting in 
+    a substantial loss of 35 points in the stress level attribute. However, since Sheridan permits students to upload their 
+    one card photo at any time throughout the year, the impact on the remaining attributes is relatively minor, amounting to a 5-point reduction.
+    '''
+    find_classes = input("1 week prior: Would you like to walk around campus and find your classes (yes/no): ").lower()
     if find_classes == "yes":
         Engagement = +10
         Self_discipline = +10
         Stress_Level = +35
         Goal_Planning = +10
         print("Congratulations, you've gained 10 points across all three attributes, and a special 35 points for stress levels!")
+        print("Because of this action, you will be familiar where your classes take place during the first week of classes.")
     else:
         Engagement = -5
         Self_discipline = -5
         Stress_Level = -35
         Goal_Planning = -5
         print("Oh no! You've lost 5 points across the board but lost 35 for stress levels")
-# one_week_pr()
+        print("Because of this action, you will be lost on the first day of classes.")
+    '''
+    This parameter is situated within the one_week_pr module, offering users the choice between seeking out their classes or waiting.
+    Opting to locate their classes during orientation week affords students the advantage of familiarity with the campus, ensuring smooth access
+    to their classes when courses commence. Since this is not a critical issue due to the presence of peer guides at Sheridan who assist lost 
+    students in locating their classes, the impact on attributes remains relatively modest, with fluctuations of 5 to 10 points in engagement, 
+    self-discipline, and goal planning. However, stress levels experience a significant impact, resulting in a substantial loss of 35 
+    points if students choose not to find their classes a week before the start of classes. This heightened stress arises from the added
+    pressure of navigating unfamiliar territory amid the upcoming academic responsibilities.
+    '''
+'''
+The "one_week_pr" module serves as a pivotal point in the game's progression. In this module, users are prompted to 
+make crucial decisions that significantly impact their attributes and ultimately influence their academic success.
+Firstly, they have the option to check their program's laptop requirements, a choice that can either gain them 35 
+points across all attributes by ensuring they have the appropriate tools for their coursework or result in a loss 
+of the same magnitude if they neglect this vital preparation. Secondly, users must decide whether to attend orientation 
+events, with attendance offering the potential for substantial attribute boosts, while non-attendance results in a loss 
+of 35 points across all attributes. Thirdly, they are asked to submit their Sheridan One Card photo, with submission 
+granting them a 10-point increase across several attributes and failure resulting in a 35-point loss in stress levels. 
+Lastly, users are given the choice to walk around campus and find their classes, a decision that can earn them 10 points
+across multiple attributes and an additional 35 points for stress levels if they opt to familiarize themselves with the 
+campus or incur a loss of 5 points across the board if they choose not to, potentially leading to stress on the first 
+day of classes. These decisions reflect the importance of planning, engagement, and self-discipline in students' 
+academic journeys and underscore the potential consequences of their choices.
+'''
 
 def week_of():
-    one_card_pickup = int("Week of: Would you like to pick up your card (yes/no): ").lower()
-    if one_card_pickup == "no":
+    print("Welcome to the first week of classes!")
+    print("If you have not already, you can drop by the One Card office, take a picture, and pick your card up the same day.")
+    print("If you already took your picture last week, no worries!")
+    one_card_pickup = input("Week of: Would you like to pick up your card (yes/no): ").lower()
+    if one_card_pickup == "yes":
         Engagement = +10
         Self_discipline = +10
         Stress_Level = +35
@@ -278,20 +328,48 @@ def week_of():
         Stress_Level = -35
         Goal_Planning = -5
         print("Oh no! You've lost 5 points across the board but lost 35 for stress levels")
-
-# week_of()
+    '''
+    This parameter belongs to the week_of module and holds significant importance, closely linked to the one_card parameter within the one_week_pr module. 
+    When a student chooses to pick up their one card during this week, they gain access to a wide array of facilities, classrooms, and spaces exclusively available to active students.
+    This access allows them to navigate the campus with ease, providing entry to essential locations. Furthermore, acquiring the one card before classes commence demonstrates
+    self-discipline, engagement, and effective planning skills, as students proactively address this task. Sheridan's flexibility in allowing students to take their one card photos at 
+    their convenience results in relatively minor point fluctuations, ranging from 5 to 10 points in engagement, self-discipline, and goal planning attributes. 
+    However, stress levels are significantly affected, with a substantial loss of 35 points if students fail to pick up their one card during the week of their classes.
+    This added task, amidst their academic and extracurricular responsibilities, introduces unnecessary stress, emphasizing the importance of timely completion.
+    '''
+'''
+This module, "week_of," is designed to welcome students to the first week of classes and provide them with information about 
+picking up their One Card. Students are encouraged to visit the One Card office to take their picture and obtain their card,
+which grants access to campus facilities. Choosing to pick up the One Card results in gaining 10 points each in engagement,
+self-discipline, and goal planning attributes, as well as a significant 35-point boost in stress levels.
+However, if students opt not to pick up their card during this week, they experience a negative impact, losing 5 points in each of
+the mentioned attributes and suffering a substantial 35-point decrease in stress levels, highlighting the importance of timely completion.
+'''
 
 def intro():
-    welcome = 
-
-
-    role = input("It’s time to choose which character you would like to play! It's important to take into account their unique characteristics and potential contributions. There are two students in which you may choose from. Would you like more information? (yes/no): ").lower()
-    if role == "yes":
-        print ("The choices are:")
-        print ("Student 1, Heba Ali, at 19 years old, is a domestic student residing close to the institution and has actively sought out Accessible Learning services, reflecting her determination and commitment to academic success. However, her preparedness in the critical two weeks before classes commence may play a pivotal role in her achievements.")
-        print("Student 2, Joseph Bane, aged 20, is an international student from Brampton, demonstrating strong academic focus and resourcefulness despite the challenges of distance. Similarly, his actions in the two weeks leading up to classes could significantly impact his success. The question then arises: which student's journey and preparation align better with the themes and objectives of your game?")
-        role_choice = input("Enter yes to play the game as Heba, or enter no to play as Joesph' (yes/no): ").lower()
-        if role_choice == "yes":
-            print("Congrautulations, you are now play as Heba Ali.")
-        else:
-            print("Congrautulations, you are now play as Joesph Ali.")
+    print("Welcome to 'Academic Weapon' – a text-based game that guides you through the journey of becoming an academic weapon!")
+    print("In this simulation, you'll follow the stories of two characters as they navigate the challenges of the academic world.") 
+    print("An academic weapon, as defined by Urban Dictionary, is someone who possesses scholarly traits, and that's precisely what we aim to help you become.")
+    print("The first weeks of college are crucial, and many students often overlook the importance of available resources, leading to increased stress levels and academic setbacks.")
+    print("Academic Weapon will immerse you in real-world scenarios, providing examples of both the right and wrong choices to make during this crucial period.") 
+    print("Throughout the game, you'll learn the significance of four essential attributes: engagement, self-discipline/responsibility, goal planning, and stress management.")
+    print("These elements are the keys to academic success, and by enhancing these skills, you'll not only excel in your studies but also experience personal growth.")
+    print("So, get ready to embark on this academic adventure, make choices, and see how your decisions impact your character's journey. Are you ready to become an academic weapon? Let's begin!")
+    welcome = input("Would you like to start the game' (yes/no): ").lower()
+    if welcome == "yes":
+        print("Awesome. You have two choices between two charachters")
+        role = input("It’s time to choose which character you would like to play! It's important to take into account their unique characteristics and potential contributions. There are two students in which you may choose from. Would you like more information? (yes/no): ").lower()
+        if role == "yes":
+            print ("The choices are:")
+            print ("Student 1, Heba Ali, at 19 years old, is a domestic student residing close to the institution and has actively sought out Accessible Learning services, reflecting her determination and commitment to academic success. However, her preparedness in the critical two weeks before classes commence may play a pivotal role in her achievements.")
+            print("Student 2, Joseph Bane, aged 20, is an international student from Brampton, demonstrating strong academic focus and resourcefulness despite the challenges of distance. Similarly, his actions in the two weeks leading up to classes could significantly impact his success. The question then arises: which student's journey and preparation align better with the themes and objectives of your game?")
+            role_choice = input("Enter yes to play the game as Heba, or enter no to play as Joesph' (yes/no): ").lower()
+            if role_choice == "yes":
+                print("Congrautulations, you are now play as Heba Ali.")
+            else:
+                print("Congrautulations, you are now play as Joesph Ali.")`
+    else:
+        print("That's okay! Hope to see you soon!")
+'''
+This module enters the welcome message and gives the user information about 
+'''
