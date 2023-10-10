@@ -367,7 +367,7 @@ def intro():
             if role_choice == "yes":
                 print("Congrautulations, you are now play as Heba Ali.")
             else:
-                print("Congrautulations, you are now play as Joesph Ali.")`
+                print("Congrautulations, you are now play as Joesph Ali.")
     else:
         print("That's okay! Hope to see you soon!")
 '''
