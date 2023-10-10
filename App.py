@@ -213,7 +213,7 @@ def one_week_pr():
              print("Services. Check out the Marketplace to meet our services, student organizations, and supports. They'll be happy to answer any of your questions and let you know of any other events going on! (You might even get some Sheridan swag!)")
              print("Social activities. There are two events, Art Hive, and Light Lunch. In Art Hive, you unleash your creativity, relax, and connect with other students. During Light lunch, you get a chance to enjoy a light complimentary lunch. It's the perfect opportunity to hang out with other new students.")
              event_choice1 = input("Would you like to go to all three events (yes/no): ").lower()
-             if event_choice1 == "no":
+             if event_choice1 == "yes":
                 Engagement = +35
                 Self_discipline = +35
                 Stress_Level = +35
@@ -321,7 +321,7 @@ def week_of():
         Self_discipline = +10
         Stress_Level = +35
         Goal_Planning = +10
-        print("Congratulations, you've gained 10 points across all three attributes, and a special 35 points for stress levels! (yes/no): ").lower()
+        print("Congratulations, you've gained 10 points across all three attributes, and a special 35 points for stress levels!")
     else:
         Engagement = -5
         Self_discipline = -5

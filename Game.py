@@ -4,6 +4,10 @@ Implementation of the game data and logic.
 from App import two_week_pr
 from App import one_week_pr
 from App import week_of
+from App import Engagement
+from App import Self_discipline
+from App import Stress_Level
+from App import Goal_Planning
 
 
 def intro():
@@ -30,15 +34,34 @@ def intro():
                 print("Congrautulations, you are now play as Joesph Ali.")
     else:
         print("That's okay! Hope to see you soon!")
+    
 '''
 This module enters the welcome message and gives the user information about 
 '''
 
 print(intro())
+#printing the welcome message and letting users choose weather to begin or not, as well as giving them insight on the characters and who they want to play as.
 
 print(two_week_pr())
-
+#printing module 1
 print(one_week_pr())
+#printing module 2
 
 print(week_of())
+#printing module 3
 
+
+def game_rules():
+    total_points = Engagement + Self_discipline + Stress_Level + Goal_Planning  
+    if total_points <= -480:
+        print(f"Total Points: {total_points}. Critical Loss.Every decision you made greatly impacted all four attributes.")
+        print("You need to review the decisions in which you have made during the game, review where you lost cirtical attribute points (10-35). Better luck next time!")
+    elif -480 < total_points < 650:
+        print(f"Total Points: {total_points}. Loss. You made bad decisions and good decisions, and it has impacted your attributes. The majority of your decisions were bad.")
+        print("You need to review the decisions in which you have made during the game, review where you lost cirtical attribute points (10-35). Better luck next time!")
+    elif 650 <= total_points < 950:
+        print(f"Total Points: {total_points}. Win. You made good  decisions and bad decisions, but overall your attributes are not negatively affected.")
+        print("You need to review the decisions in which you have made during the game, review where you lost cirtical attribute points (10-35). Better luck next time!")
+    else:
+        print(f"Total Points: {total_points}. Critical Win! You made every possible right decision! Congrautlations!")
+print (game_rules())
