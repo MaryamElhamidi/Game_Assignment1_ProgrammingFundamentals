@@ -28,15 +28,16 @@ def intro():
             print ("Student 1, Heba Ali, at 19 years old, is a domestic student residing close to the institution and has actively sought out Accessible Learning services, reflecting her determination and commitment to academic success. However, her preparedness in the critical two weeks before classes commence may play a pivotal role in her achievements.")
             print("Student 2, Joseph Bane, aged 20, is an international student from Brampton, demonstrating strong academic focus and resourcefulness despite the challenges of distance. Similarly, his actions in the two weeks leading up to classes could significantly impact his success. The question then arises: which student's journey and preparation align better with the themes and objectives of your game?")
             role_choice = input("Enter yes to play the game as Heba, or enter no to play as Joesph' (yes/no): ").lower()
-            if role_choice == "yes":
-                print("Congrautulations, you are now play as Heba Ali.")
-            else:
-                print("Congrautulations, you are now play as Joesph Ali.")
+        if role_choice == "yes":
+            print("Congrautulations, you are now play as Heba Ali.")
+            return
+        else:
+            print("Congrautulations, you are now play as Joesph Ali.")
+            return
     else:
-        print("That's okay! Hope to see you soon!")
-    
+        print("That's okay! Hope to see you soon!")    
 '''
-This module enters the welcome message and gives the user information about 
+This module enters the welcome message and gives the user information about the respected characters given. They get to choose which character they would like to play as as well.
 '''
 
 print(intro())
@@ -64,4 +65,9 @@ def game_rules():
         print("You need to review the decisions in which you have made during the game, review where you lost cirtical attribute points (10-35). Better luck next time!")
     else:
         print(f"Total Points: {total_points}. Critical Win! You made every possible right decision! Congrautlations!")
+'''
+This module discusses the win or loss criteria for the game Academic Weapon.
+'''
+
+
 print (game_rules())
